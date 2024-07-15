@@ -75,7 +75,7 @@ guardar.addEventListener('click', (agregarNota)=>{
                 idGlobal=notas[notas.length-1].id
             
                 espacioNota = document.createElement('div')
-                espacioNota.id = `nota${notas[notas.length-1].id}` // aqui agregue el id para poder usar remove
+                espacioNota.id = `nota${notas[notas.length-1].id}`
                 espacioNota.className = 'card p-2 m-2'
                 espacioNota.innerHTML = `
                         <div class="card-header row"> 
@@ -104,9 +104,9 @@ let botonBorrar = document.getElementById("borradoNota")
 
 function borrarNota(id) {
     let notaBorrar = document.getElementById("nota" + id)
-    notaBorrar.remove() //borra la tarjeta
-    notas=notas.filter(notas => notas.id != id) //borra la nota del array
-    if(notas.length==0){ //esto es por si se queda sin notas
+    notaBorrar.remove() 
+    notas=notas.filter(notas => notas.id != id)
+    if(notas.length==0){ 
         let anuncio = document.createElement('p')
         anuncio.id = "anuncio"
         anuncio.innerHTML = `NO HAY NOTAS PARA MOSTRAR`
